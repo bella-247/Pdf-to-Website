@@ -4,6 +4,7 @@ import Features from '../components/Features/Features';
 import Templates from '../components/Templates/Templates';
 import Testimonials from '../components/Testimonials/Testimonials';
 import HowItWorks from '../components/HowItWorks/HowItWorks';
+import Footer from '../components/Footer/Footer';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Templates />
       <Testimonials />
       <HowItWorks />
+      <Footer />
     </>
   );
 }
