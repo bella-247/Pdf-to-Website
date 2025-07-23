@@ -1,0 +1,59 @@
+/* src/components/PDFUpload/PDFUpload.css */
+
+.upload-container {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.upload-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.upload-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.upload-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.upload-box {
+  margin-top: 30px;
+  border: 2px dashed #ccc;
+  padding: 50px 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.upload-box:hover {
+  border-color: #7b61ff;
+}
+
+.upload-box input[type="file"] {
+  display: none;
+}
+
+.upload-label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.browse-text {
+  font-weight: bold;
+  color: #7b61ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.file-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #888;
+}
