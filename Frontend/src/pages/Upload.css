@@ -1,28 +1,32 @@
+/* src/pages/Upload.css */
+
 .upload-page-container {
   display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 3rem 4rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 3rem;
-  padding: 4rem 2rem;
-  background-color: #fafafa;
 }
 
 .upload-left,
 .upload-right {
-  background-color: #ffffff;
-  border-radius: 1rem;
-  padding: 2.5rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-  flex: 1 1 45%;
-  max-width: 600px;
+  flex: 1;
+  min-width: 300px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .upload-left,
-  .upload-right {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+/* Optional: Add box styling */
+.upload-left {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.upload-right {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
