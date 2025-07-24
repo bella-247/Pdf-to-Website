@@ -9,6 +9,8 @@ def process_pdf(pdf_path):
     Task to process a PDF file, extract its text, and send it to the Gemini API.
     """
     try:
+        if not pdf_path or not isinstance(pdf_path, str):
+            raise ValidationError("Invalid or missing PDF path provided.")
         pdf_text = extract_text_blocks(pdf_path)
         if not pdf_text:
             raise ValidationError("No text found in the PDF.")
