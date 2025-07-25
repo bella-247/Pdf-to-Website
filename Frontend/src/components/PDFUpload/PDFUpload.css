@@ -1,35 +1,58 @@
-/* PDFUpload.css */
-.upload-box {
-  width: 100%;
+/* src/components/PDFUpload/PDFUpload.css */
+
+.upload-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .upload-title {
-  font-size: 1.25rem;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 1.25rem;
+  margin-bottom: 30px;
+  color: #222;
 }
 
-.upload-drag-area {
-  border: 2px dashed #cbd5e1;
-  border-radius: 0.75rem;
-  padding: 2.5rem 1.5rem;
-  background: #f8fafc;
-}
-
-.upload-support {
-  display: block;
-  font-size: 0.9rem;
-  color: #64748b;
-  margin: 0.5rem 0 1rem;
-}
-
-.upload-btn {
-  background-color: #4f46e5;
-  color: white;
-  font-weight: 500;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.5rem;
-  border: none;
+.upload-box {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 40px;
+  background-color: #fdfdfd;
+  transition: background-color 0.3s ease;
   cursor: pointer;
+  position: relative;
+}
+
+.upload-box:hover {
+  background-color: #f4f4f4;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upload-icon {
+  width: 48px;
+  height: 48px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.upload-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-filename {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
 }
