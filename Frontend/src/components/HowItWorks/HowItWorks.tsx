@@ -1,25 +1,22 @@
-// src/components/HowItWorks/HowItWorks.tsx
-import './HowItWorks.css';
-
+// src/components/HowItWorks.tsx
 export default function HowItWorks() {
+  const steps = [
+    "Upload your PDF Resume",
+    "Pick a design template",
+    "Publish your personal website",
+  ];
+
   return (
-    <section className="how-it-works">
-      <h2 className="hiw-title">How It Works</h2>
-      <div className="hiw-steps">
-        <div className="hiw-step">
-          <img src="/step1.png" alt="Upload Resume" />
-          <h3>1. Upload Resume</h3>
-          <p>Choose your PDF or Docx file to begin.</p>
-        </div>
-        <div className="hiw-step">
-          <img src="/step2.png" alt="Choose Template" />
-          <h3>2. Choose Template</h3>
-          <p>Select a design that fits your style.</p>
-        </div>
-        <div className="hiw-step">
-          <img src="/step3.png" alt="Customize and Launch" />
-          <h3>3. Customize & Launch</h3>
-          <p>Make edits and publish your portfolio instantly.</p>
+    <section id="how" className="py-20 bg-white dark:bg-gray-900">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold mb-12 dark:text-white">How It Works</h2>
+        <div className="flex flex-col md:flex-row justify-center gap-8">
+          {steps.map((s, i) => (
+            <div key={i} className="p-6 border rounded-lg dark:border-gray-700">
+              <span className="text-4xl font-bold text-purple-500">{i + 1}</span>
+              <p className="mt-4 text-gray-700 dark:text-gray-300">{s}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
