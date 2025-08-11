@@ -1,44 +1,22 @@
-// src/components/Navbar.tsx
-import { Sun, Moon } from "lucide-react";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [darkMode]);
-
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-900 shadow-md fixed w-full z-50">
-      <h1 className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-        Portafy
-      </h1>
-      <div className="flex items-center gap-4">
-        <a href="#features" className="text-gray-700 dark:text-gray-300 hover:text-purple-500">
-          Features
-        </a>
-        <a href="#how" className="text-gray-700 dark:text-gray-300 hover:text-purple-500">
-          How It Works
-        </a>
-        <a href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-purple-500">
-          Contact
-        </a>
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="p-2 rounded-full bg-gray-200 dark:bg-gray-700"
-        >
-          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-        </button>
+    <motion.nav
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="bg-white shadow-md fixed w-full z-50"
+    >
+      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-[#6C63FF]">Portafy</h1>
+        <ul className="flex gap-6 text-gray-700 font-medium">
+          <li className="hover:text-[#6C63FF] cursor-pointer">Home</li>
+          <li className="hover:text-[#6C63FF] cursor-pointer">Services</li>
+          <li className="hover:text-[#6C63FF] cursor-pointer">Pricing</li>
+          <li className="hover:text-[#6C63FF] cursor-pointer">Contact</li>
+        </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

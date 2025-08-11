@@ -1,21 +1,25 @@
-import Navbar from '../components/Navbar/Navbar';
-import Hero from '../components/Hero/Hero';
-import Features from '../components/Features/Features';
-import Templates from '../components/Templates/Templates';
-import Testimonials from '../components/Testimonials/Testimonials';
-import HowItWorks from '../components/HowItWorks/HowItWorks';
-import Footer from '../components/Footer/Footer';
+import Navbar from "../components/Navbar/Navbar";
+import Hero from "../components/Hero/Hero";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
+import WhyChoose from "../components/WhyChoose/WhyChoose";
+import Services from "../components/Services/Services";
+import Pricing from "../components/Pricing/Pricing";
+import Testimonials from "../components/Testimonials/Testimonials";
+import CallToAction from "../components/CallToAction/CallToAction";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <Hero />
-      <Features />
-      <Templates />
-      <Testimonials />
       <HowItWorks />
+      <WhyChoose />
+      <Services />
+      <Pricing />
+      <Testimonials />
+      <CallToAction />
       <Footer />
-    </>
+    </div>
   );
 }

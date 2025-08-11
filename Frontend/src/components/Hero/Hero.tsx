@@ -1,32 +1,32 @@
-// src/components/HeroSection.tsx
 import { motion } from "framer-motion";
 
-export default function HeroSection() {
+export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-6">
-      <motion.h1
-        initial={{ opacity: 0, y: -50 }}
+    <section
+      className="h-screen bg-cover bg-center flex items-center justify-center text-white relative"
+      style={{
+       backgroundImage:
+          "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1950&q=80')",
+      }}
+    >
+      <div className="bg-black/50 absolute inset-0" />
+      <motion.div
+        className="relative z-10 text-center max-w-2xl px-6"
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-5xl font-extrabold text-center"
       >
-        Turn Your PDF Resume into a Stunning Website 🚀
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-        className="mt-6 text-lg text-center max-w-2xl"
-      >
-        Upload your PDF, choose a design, and get a professional online portfolio instantly.
-      </motion.p>
-      <motion.a
-        href="/upload"
-        whileHover={{ scale: 1.05 }}
-        className="mt-8 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-2xl transition"
-      >
-        Get Started
-      </motion.a>
+        <h1 className="text-5xl font-bold mb-4">
+          Turn Your Resume Into a Stunning Portfolio
+        </h1>
+        <p className="text-lg mb-6">
+          Portafy helps you showcase your skills, experience, and achievements
+          through a personalized, professional website.
+        </p>
+        <button className="bg-[#38BDF8] px-6 py-3 rounded-lg hover:bg-[#0EA5E9] transition">
+          Create My Portfolio
+        </button>
+      </motion.div>
     </section>
   );
 }
