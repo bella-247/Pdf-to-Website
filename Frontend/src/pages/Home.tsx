@@ -3,7 +3,7 @@ import Hero from "../components/Hero/Hero";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import WhyChoose from "../components/WhyChoose/WhyChoose";
 import Services from "../components/Services/Services";
-import Pricing from "../components/Pricing/Pricing";
+import Pricing from "../components/pricing/pricing";
 import Testimonials from "../components/Testimonials/Testimonials";
 import CallToAction from "../components/CallToAction/CallToAction";
 import Footer from "../components/Footer/Footer";
