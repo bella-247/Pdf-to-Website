@@ -1,17 +1,19 @@
 // src/App.tsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Upload from './pages/Upload';
-import SignUp from './pages/Auth/SignUp';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// Home is not present yet; temporarily route root to Signin
+import Signin from "./pages/Auth/Signin";
+import Signup from "./pages/Auth/Signup";
 
-export default function App() {
+function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/upload" element={<Upload />} />
-        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/" element={<Signin />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
   );
 }
+
+export default App;
